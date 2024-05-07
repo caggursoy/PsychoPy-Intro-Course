@@ -16,8 +16,11 @@ Brief overview of the course content and objectives.
 ## Course Objectives
 
 - Python basics
-- Experiment implementation in Psychopy
 - Conda environments
+- Experiment implementation in Psychopy
+  - Builder
+  - Coder
+  - Scripting
 - ...
 
 ## Agenda
