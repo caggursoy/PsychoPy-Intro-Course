@@ -6,12 +6,12 @@ Brief overview of the course content and objectives.
 
 ## Course Details
 
-- **Date&Time:** TBA
+- **Date&Time:** 27.05.2024
 - **Location:** TBA
 - **Prerequisites:** For installation information of prerequisites, please check below
-  - Prior scripting/programming ability, Python knowledge is a plus :)
-  - Anaconda or Miniconda
-  - Spyder
+  - Prior soft scripting/programming ability, Python knowledge is a plus :)
+  - For package management: Anaconda or Miniconda
+  - For scripting: Spyder or a similar Python IDE
 
 ## Course Objectives
 
@@ -21,9 +21,19 @@ Brief overview of the course content and objectives.
   - Builder
   - Coder
   - Scripting
-- ...
 
 ## Agenda
+
+### Before the course!
+
+- Fill the Google form!
+  - [Click here!](https://forms.gle/X8QgtXbxg8Wj5oi38)
+- Installing Anaconda or Miniconda
+  - Tutorial to be provided [here]()!
+- Installing PsychoPy
+  - Tutorial to be provided [here]()!
+- Installing a Python IDE
+  - Tutorial to be provided [here]()!
 
 ### Part 1: Introduction to Python (in an hour or so)
 
@@ -72,10 +82,13 @@ To be populated
 - Çağatay Gürsoy
 - [Mail me!](mailto:cagatay.guersoy@zi-mannheim.de)
 
-## Installation Information for the Prerequisite Programs
+## External Installation Information for the Prerequisite Programs
 
-- Spyder
-- Anaconda/Miniconda
+Installation information regarding the prerequisites from external sources.
+
+- [Anaconda/Miniconda]()
+- [PsychoPy]()
+- [Spyder]()
 
 ## Note
 
