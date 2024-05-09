@@ -67,6 +67,7 @@ conda create --name psychopy python=3.10
 ```
 
 - Which will create a virtual environment named _psychopy_ with Python version 3.10
+  ![Conda environment installation](images/psychopy_install.png)
 
 ### PsychoPy installation
 
@@ -88,7 +89,7 @@ pip install psychopy
 ```
 
 - Now you should see a screen similar to this, you should type in `y`, punch `enter` and let the installer handle the rest
-  ![Conda check](images/psychopy_install.png)
+  ![PsychoPy installation](images/psychopy_install2.png)
 
 - After the installation is completed you can simply check if it was successful by listing all the packages in the `(psychopy)` environment and filtering for the `psychopy` package with the following command:
 

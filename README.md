@@ -29,9 +29,9 @@ Brief overview of the course content and objectives.
 - Fill the Google form!
   - [Click here!](https://forms.gle/X8QgtXbxg8Wj5oi38)
 - Installing Anaconda or Miniconda
-  - Tutorial to be provided [here]()!
+  - Tutorial to be provided [here](./conda/README.md)!
 - Installing PsychoPy
-  - Tutorial to be provided [here]()!
+  - Tutorial to be provided [here](./conda/README.md)!
 - Installing a Python IDE
   - Tutorial to be provided [here]()!
 
