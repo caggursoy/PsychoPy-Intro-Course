@@ -36,6 +36,7 @@ A step by step guide to install Conda with Python and PsychoPy.
 
 - Start your favourite terminal
 - You should see your base Conda environment activated in the beginning of the path in the beginning of the line as: `(base)`
+  ![Conda check](images/conda_check_mac.png)
 
 ## PsychoPy installation guide
 
