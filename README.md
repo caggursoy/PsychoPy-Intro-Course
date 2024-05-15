@@ -42,16 +42,21 @@ Brief overview of the course content and objectives.
   - Lists and dictionaries
   - Loops
   - Numpy, pandas and Matplotlib
-- Data Analysis
+  - Functions
+  - Debugging
+- [**Optional**]: Data Analysis
   - Introduction to data analysis with Python
   - Data visualization using Matplotlib
   - Basic statistical analysis with Pandas
+- Virtual Environments in Python
+  - Conda
 
 ### Part 2: Introduction to Psychopy (in an hour or so)
 
 - Introduction to Psychopy
   - Overview of Psychopy and its capabilities
   - Installation and setup
+  - Interface overview
 - [**Optional**]: Experimental Design
   - Design principles and considerations
   - Randomization and counterbalancing
@@ -71,7 +76,13 @@ Brief overview of the course content and objectives.
   - Guided tutorial on creating simple experiments
   - Hands-on practice session
 
-## Resources
+### Part 4: Packing up your experiment
+
+- [**Optional**]: Version control with Git
+- Packing up the experiment as an executable with `pyinstaller`
+- Packing up the experiment script with using `conda` environments
+
+## Resources and Ongoing Learning
 
 To be populated
 
