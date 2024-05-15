@@ -35,7 +35,7 @@ Brief overview of the course content and objectives.
 - Installing a Python IDE
   - Tutorial to be provided [here]()!
 
-### Part 1: Introduction to Python (in an hour or so)
+### [Part 1: Introduction to Python (in an hour or so)](./intro-python/README.md)
 
 - Fundamental concepts in Python
   - Strings, integers, floats
@@ -51,7 +51,7 @@ Brief overview of the course content and objectives.
 - Virtual Environments in Python
   - Conda
 
-### Part 2: Introduction to Psychopy (in an hour or so)
+### [Part 2: Introduction to Psychopy (in an hour or so)](./intro-psychopy/README.md)
 
 - Introduction to Psychopy
   - Overview of Psychopy and its capabilities
@@ -70,13 +70,13 @@ Brief overview of the course content and objectives.
   - Response collection methods
   - Synchronization with external devices (e.g., EEG, eye trackers)
 
-### Part 3: Scripting a basic experiment in Psychopy
+### [Part 3: Scripting a basic experiment in Psychopy](./scripting/README.md)
 
 - Practical Exercise
   - Guided tutorial on creating simple experiments
   - Hands-on practice session
 
-### Part 4: Packing up your experiment
+### [Part 4: Packing up your experiment](./packing/README.md)
 
 - [**Optional**]: Version control with Git
 - Packing up the experiment as an executable with `pyinstaller`
