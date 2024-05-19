@@ -7,7 +7,7 @@ Brief overview of the course content and objectives.
 ## Course Details
 
 - **Date&Time:** 27.05.2024
-- **Location:** TBA
+- **Location:** Institut für Psychosoziale Prävention, Bergheimer Str. 54, 3rd floor (room 301), Heidelberg
 - **Prerequisites:** For installation information of prerequisites, please check below
   - Prior soft scripting/programming ability, Python knowledge is a plus :)
   - For package management: Anaconda or Miniconda
