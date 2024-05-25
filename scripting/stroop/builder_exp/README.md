@@ -1,8 +1,6 @@
-# Creating a basic Stroop task experiment from scratch
+# Creating a basic Stroop task experiment from scratch using builder interface
 
-## Using builder interface
-
-### Step 1: Set Up the Experiment
+## Step 1: Set Up the Experiment
 
 - Open PsychoPy Builder:
 
@@ -13,7 +11,7 @@
   - Save the experiment with the name `stroop.psyexp`
     ![Create new experiment](img/new_exp.png)
 
-### Step 2: Define the Conditions
+## Step 2: Define the Conditions
 
 - Create a Conditions File:
 
@@ -50,7 +48,7 @@
   df_conditions.to_csv('conditions.csv')
   ```
 
-### Step 3: Build the Routines
+## Step 3: Build the Routines
 
 - How to add a Routine:
 
@@ -78,7 +76,7 @@
     - `Duration` (s): Leave it blank or set to a desired duration, e.g., 1.0
     - `Units`: Leave at default
 
-#### - `Welcome` Routine
+### - `Welcome` Routine
 
 - Click on the `Insert Routine` button on bottom left
 - Select `new` and name it `welcome`
@@ -88,15 +86,17 @@
   - You can set it how long you want
 - Type the welcome text to be shown in the `Text` field
 - Click `OK`; now you should have your `welcome` routine
+
   ![Welcome routine](img/welcome0.png)
 
-#### - `Instructions` Routine
+### - `Instructions` Routine
 
 - Create the `Instructions` routine first
 - One needs a `Text` and `Keyboard` component for the `Instructions` routine as the participants will be let to read the instructions with their own pace
 - Add a `Text` component, you can name it `text`
 - Do not type in any `Stop` time, this will be checked by the keyboard
 - Type in the instructions in the `Text` field and click `OK`
+
   ![Instructions text field](img/inst_text0.png)
 
 - Now add a `Keyboard` component, name it `key_resp` for keyboard responses
@@ -104,14 +104,16 @@
 - Set `Register keypress on...` field as `press`
 - And allowed keys to `'return'` as we will use the `Enter` key for to move on to the next screen
 - Click `OK`
+
   ![Instructions keyboard press](img/inst_key0.png)
 
-#### - `Fixation cross` Routine
+### - `Fixation cross` Routine
 
 - Create the `Fixation` routine first
 - Now we need a Fixation cross
 - As PsychoPy is able to display polygons via drawing the points specified, we will use the `Polygon` component
 - PsychoPy already offers the following options natively, without thinking about the individual points:
+
   ![Polygon options](img/fix_cross0.png)
 
   So let's leverage that
@@ -123,25 +125,33 @@
 - In `Appereance` menu, set the `Fill color` and `Border color` to `Black`.
 - Click `OK` and now you have the fixation cross
 
-##### - `Stim` Routine
+### - `Stim` Routine
 
 - Next up is displaying the stimuli!
 - Create a routine with the name of `stim`
 - We need two components for this routine, one `Text` and one `Keyboard`
 - Name the `Text`routine as `stim_text`and with no duration
+
   - For the text, we will use the variable from the `.csv`stimuli file
   - It should be the header of the column, therefore in text field type in `$word`
+
     ![Setting the word variable](img/stim_text.png)
+
   - Now to set the color of the word, switch to the `Appereance` section and in `Foreground color` section type `$color` which is the header of the color column in the stimuli `.csv` file
   - Don't forget to set the dropdown menu on the right side of the `Foreground color` section to `set every repeat` so that in every step the word and the color of the word is re-set
+
     ![Setting the color variable of the stimuli](img/stim_color.png)
+
   - Click `OK` and confirm
+
 - Now create a `Keyboard` component and name and name it `key_resp_2`
+
   - Set the duration to `0` and `Allowed keys` to `'left','right'` as we will only check left and right keypresses for the correctness of the participant reactions
   - Click `OK` and confirm
+
     ![Setting the keypress variable for the stimuli](img/stim_keyp.png)
 
-##### - `Checker` Routine
+### - `Checker` Routine
 
 - Now we create a routine that would "check" if the participant succesfully selected the right color-word combination or not
 - For this end, we need a `Code` component to handle the checking process and a `Text` component to display the feedback
@@ -165,6 +175,7 @@
     ```
 
 - Click `OK` and confirm
+
   ![Coding block](img/code0.png)
 
 - Next step is creating the `Text` component for feedback displaying
@@ -172,9 +183,10 @@
 - Type `$text` (the variable which you've assigned the result in the the checking script) in the `Text`block and
 - Confirm that the dropdown menu on the right side is set to `set every repeat`
 - Confirm with `OK`
+
   ![Check routine text display](img/code1.png)
 
-##### - `Inter-stimulus Interval` Routine
+### - `Inter-stimulus Interval` Routine
 
 - Another important aspect is creating a random "Inter-stimulus interval" after the presentation of each stimulus
 - Create a new routine, call it `isi`
@@ -189,22 +201,27 @@
   ```
 - Confirm with `OK`
 
-#### - Trial loop
+### - Trial loop
 
 - Finally the most important step, displaying all the stimuli listed in the `conditions.csv`
 - Click `Insert Loop` in the `Flow` menu displayed at the bottom
+
   ![Insert loop](img/loop0.png)
+
 - Now click on the beginning and the end of our stimuli displaying `Routines`, so before `stim` and after `isi`
+
   ![Insert loop on the timeline](img/loop1.png)
+
 - The loop is now set, but we need to set some variables
 - Set the `Name` as `trials`
 - `Loop type` as `random` for our case. In other cases, if you have already provided a pseudorandomised list, you can select `sequential`
 - `Num. repeats` is the number of times that this loop will be repeated. You can set it to how many times you want it to repeat
 - Finally we need to provide the `conditions.csv` file to the loop. Do it by clicking the `Folder selection` button on the right side of the `Conditions` field. If you have correctly set the conditions file, you should be able to see the number of parameters and conditions exist in the file.
 - Confirm with `OK`
+
   ![Set the loop properties](img/trials1.png)
 
-#### Done! You have successfully created a Stroop task
+## Done! You have successfully created a Stroop task
 
 - You can now test the experiment by clickin the `Play` button on the top menu
   ![Test the task](img/test_stroop.png)
