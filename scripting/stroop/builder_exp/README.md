@@ -223,5 +223,10 @@
 
 ## Done! You have successfully created a Stroop task
 
-- You can now test the experiment by clickin the `Play` button on the top menu
+- Your final `Flow` should look like this:
+
+  ![Flow](img/flow.png)
+
+- You can now test the experiment by clicking the `Play` button on the top menu
+
   ![Test the task](img/test_stroop.png)
