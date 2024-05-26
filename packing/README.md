@@ -102,6 +102,8 @@ For more detailed documentation, refer to the [PyInstaller official documentatio
 
 Which is a GUI written on top of PyInstaller!
 
+![Auto-py-to-exe image](https://pypi-camo.freetls.fastly.net/eb29c9774b11dab42fbee0e2c5e9cf2af72895fc/68747470733a2f2f6e6974726174696e652e6e65742f706f7374732f6175746f2d70792d746f2d6578652f666561747572652e706e67)
+
 ## Guide: Using `auto-py-to-exe` to Convert Python Scripts to Executables
 
 ### Step 1: Install `auto-py-to-exe`
