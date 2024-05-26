@@ -20,14 +20,14 @@
 
 ## Agenda
 
-### Before the course!
+### Before (or replicating after) the course!
 
 - Fill the Google form!
   - [Click here!](https://forms.gle/X8QgtXbxg8Wj5oi38)
 - Installing Anaconda or Miniconda
-  - Tutorial to be provided [here](./conda/README.md)!
+  - Tutorial [here](./conda/README.md#conda-installation-guide)!
 - Installing PsychoPy
-  - Tutorial to be provided [here](./conda/README.md)!
+  - Tutorial [here](./conda/README.md#psychopy-installation-guide)!
 - Installing a Python IDE
   - Tutorial to be provided [here]()!
 
@@ -46,6 +46,7 @@
   - Basic statistical analysis with Pandas
 - Virtual Environments in Python
   - Conda
+- Google Colab link: [Click!](https://colab.research.google.com/drive/1w7zt0LMc29QquYi-oPJamnNcRtISlSlr?usp=sharing)
 
 ### [Part 2: Introduction to Psychopy (in an hour or so)](./intro-psychopy/README.md)
 
@@ -78,24 +79,23 @@
 - Packing up the experiment as an executable with `pyinstaller`
 - Packing up the experiment script with using `conda` environments
 
-## Resources and Ongoing Learning
+## Installation Information for Conda and PsychoPy
 
-To be populated
+### Installation information regarding the prerequisites from external sources.
 
-- ...
+- [Anaconda/Miniconda](https://www.anaconda.com/download)
+- [PsychoPy](https://www.psychopy.org/download.html)
+- [Spyder]()
+
+### Further documentation for Psychopy
+
+- [PsychoPy documentation](https://psychopy.org/documentation.html)
+- [PsychoPy discussion forum](https://discourse.psychopy.org/)
 
 ## Instructor Information
 
 - Çağatay Gürsoy
 - [Mail me!](mailto:cagatay.guersoy@zi-mannheim.de)
-
-## External Installation Information for the Prerequisite Programs
-
-Installation information regarding the prerequisites from external sources.
-
-- [Anaconda/Miniconda]()
-- [PsychoPy]()
-- [Spyder]()
 
 ## Note
 
