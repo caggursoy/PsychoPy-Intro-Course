@@ -163,7 +163,7 @@
 
     - Hint, you can use this:
 
-    ```
+    ```python
     if color == 'red' and key_resp_2.keys == 'left':
         text = 'correct'
     elif color == 'red' and key_resp_2.keys == 'right':
@@ -195,7 +195,7 @@
 - For that we can utilize the `random` class of Python by creating a `Code` component
 - Create a `Code` component and name it `t_isi`
 - Go to the `Begin routine` tab and paste the following code snippet which will randomly sample an real number between 0 and 1
-  ```
+  ```python
   import random
   t_isi = random.uniform(0, 1)
   ```

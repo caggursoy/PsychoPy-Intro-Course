@@ -1,11 +1,12 @@
 # Creating a basic Stroop task experiment from scratch using PsychoPy scripting
 
-## Step 1: Set Up the Environment
+## Step 0: Set Up the Environment
 
-- Ensure you have PsychoPy installed. You can download it from the [PsychoPy website](https://www.psychopy.org/download.html).
+- Ensure you have activated your `PsychoPy` Conda environment and PsychoPy is installed in your Conda environment
+  - Refresher: [This readme!](https://github.com/caggursoy/PsychoPy-Intro-Course/blob/main/conda/README.md)
 - Open your preferred code editor or the PsychoPy Coder view.
 
-## Step 2: Create the Conditions File
+## Step 1: Create the Conditions File
 
 - Use the following Python code to generate the conditions file:
 
@@ -37,11 +38,11 @@ Explanation:
 
 - Save this script as `create_conditions.py` and run it to generate `conditions.csv`.
 
-## Step 3: Write the Stroop Task Script
+## Step 2: Create the Stroop Task Script
 
-- Create a new Python script file (e.g., `stroop_task.py`) and use the following code:
+- Create a new Python script file, name it `stroop_task.py` and start scripting!
 
-### Import Libraries
+## Step 3: Import Libraries
 
 ```python
 from psychopy import visual, core, data, event, gui
@@ -53,36 +54,7 @@ Explanation:
 - This block imports necessary libraries from PsychoPy for creating visual stimuli, handling time, managing data, capturing events, and displaying graphical user interfaces.
 - The `random` library is imported to generate random inter-stimulus intervals (ISI).
 
-### Define a Function to Create the Conditions CSV File
-
-```python
-def create_conditions_file():
-    import pandas as pd
-
-    # create the lists
-    words = ['BLUE']*5 + ['RED']*5
-    colors = ['blue']*5 + ['red']*5
-
-    # shuffle them and create the dataframe using them
-    random.shuffle(words)
-    random.shuffle(colors)
-
-    # create the dataframe with using dictionary declaration
-    df_conditions = pd.DataFrame({'word': words, 'color': colors})
-
-    # save the dataframe
-    df_conditions.to_csv('conditions.csv', index=False)
-
-# Create the conditions file
-create_conditions_file()
-```
-
-Explanation:
-
-- This function creates the `conditions.csv` file used in the experiment.
-- It generates lists of words and colors, shuffles them, and saves them as a CSV file.
-
-### Set Up Experiment Information
+## Step 5: Set Up Experiment Information
 
 ```python
 # Create a dictionary for storing the experiment info
@@ -97,7 +69,7 @@ Explanation:
 - This block creates a dialog box to collect participant information.
 - If the user cancels the dialog, the experiment exits.
 
-### Create a Window
+## Step 6: Create a Window
 
 ```python
 # Create a window with gray background
@@ -109,7 +81,7 @@ Explanation:
 - This line creates a window with a gray background where the experiment will be displayed.
 - The window size is set to 800x600 pixels, and the units are set to `height` for scaling.
 
-### Welcome Routine
+## Step 7: Welcome Routine
 
 ```python
 # Welcome routine
@@ -125,7 +97,7 @@ Explanation:
 - The `TextStim` object creates text stimuli, and `win.flip()` updates the window to show the text.
 - `event.waitKeys()` waits for the participant to press any key to continue.
 
-### Instructions Routine
+## step 8: Instructions Routine
 
 ```python
 # Instructions routine
@@ -140,7 +112,7 @@ Explanation:
 - This block displays instructions to the participant.
 - It waits for the participant to press the `Enter` key to start the experiment.
 
-### Fixation Cross Routine
+## Step 9: Fixation Cross Routine
 
 ```python
 # Create a fixation cross
@@ -152,7 +124,7 @@ Explanation:
 - This block creates a fixation cross to center the participant's attention before each trial.
 - The `ShapeStim` object is used to create the cross.
 
-### Define the Trial Routine
+## Step 10: Define the Trial Routine
 
 ```python
 # Define the trial routine
@@ -165,7 +137,7 @@ Explanation:
 - This block defines the components of a trial.
 - `trial_text` will display the word stimuli, and `key_resp` will handle the participant's key responses.
 
-### Set Up Data Handler
+## Step 11: Set Up Data Handler
 
 ```python
 # Create a data handler for the trials
@@ -181,7 +153,7 @@ Explanation:
 - This block creates a `TrialHandler` to manage trial conditions and randomize their order.
 - `ExperimentHandler` is used to handle saving data, and `addLoop(trials)` adds the trial loop to the experiment.
 
-### Run the Trial Loop
+## Step 12: Run the Trial Loop
 
 ```python
 # Run the trial loop
@@ -241,7 +213,7 @@ Explanation:
   - Provides feedback based on the correctness of the response.
   - Displays a random inter-stimulus interval (ISI).
 
-### Save the Data
+## Step 14: Save the Data
 
 ```python
 # Save the data to a CSV file
@@ -253,7 +225,7 @@ Explanation:
 
 - This block saves the collected data in both CSV and pickle formats.
 
-### End of Experiment
+## Step 15: End of Experiment
 
 ```python
 # End of experiment
@@ -272,8 +244,9 @@ Explanation:
 - This block displays a thank-you message and waits for the participant to press any key to exit.
 - It then closes the window and quits the experiment.
 
-## Step 4: Run the Experiment
+## Step 16: Run the Experiment
 
+- Save the script
 - Ensure the `conditions.csv` file is in the same directory as your script.
 - Open a terminal or command prompt and navigate to the directory containing your script.
 - Run the script using the following command:
@@ -283,7 +256,3 @@ python stroop_task.py
 ```
 
 - Follow the instructions displayed on the screen to complete the experiment.
-
-## Summary
-
-You have now created and run a basic Stroop task experiment using the scripting mode of PsychoPy. The script includes all necessary components and saves the participant responses to a CSV file.

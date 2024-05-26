@@ -6,6 +6,7 @@ This guide will help you create an image rating task experiment using PsychoPy s
 
 - Ensure you have PsychoPy installed. You can download it from the [PsychoPy website](https://www.psychopy.org/download.html).
 - Open your preferred code editor or the PsychoPy Coder view.
+- Create a new Python script file, name it `image_rating_task.py` and start scripting!
 
 ## Step 1: Import Libraries
 
@@ -216,7 +217,3 @@ python image_rating_task.py
 ```
 
 - Follow the instructions displayed on the screen to complete the experiment.
-
-## Summary
-
-You have now created and run an image rating task experiment using the scripting mode of PsychoPy. The script includes all necessary components and saves the participant responses and logs to a CSV file and a log file, respectively.
