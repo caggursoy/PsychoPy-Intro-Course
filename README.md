@@ -1,8 +1,4 @@
-# PsychoPy Intro Course
-
-## Course Overview
-
-Brief overview of the course content and objectives.
+# Introduction to PsychoPy Course
 
 ## Course Details
 
