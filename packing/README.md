@@ -3,6 +3,7 @@
 ## Topics:
 
 - PyInstaller
+  - Auto-py-to-exe
 - Conda
 
 ---

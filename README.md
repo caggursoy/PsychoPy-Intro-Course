@@ -2,7 +2,7 @@
 
 ## Course Details
 
-- **Date&Time:** 27.05.2024
+- **Date&Time:** 27.05.2024 / 9.00
 - **Location:** Institut für Psychosoziale Prävention, Bergheimer Str. 54, 3rd floor (room 301), Heidelberg
 - **Prerequisites:** For installation information of prerequisites, please check below
   - Prior soft scripting/programming ability, Python knowledge is a plus :)
