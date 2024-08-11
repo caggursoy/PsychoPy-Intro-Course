@@ -2,6 +2,10 @@
 
 This PsychoPy experiment displays images to participants and collects their ratings on the realism of each image. The experiment is compatible with both fMRI environments and standard behavioral setups, with customizable settings for each context.
 
+## Link to script
+
+The full script to the task is in this [link](https://github.com/caggursoy/PsychoPy-Intro-Course/blob/main/scripting/fmri/scripting/image_fmri.py).
+
 ## Table of Contents
 
 - [Dependencies](#dependencies)
