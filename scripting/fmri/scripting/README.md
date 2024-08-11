@@ -1,18 +1,36 @@
-
 # Image Rating Task with PsychoPy
 
-This repository contains a PsychoPy script for running an image rating task. Participants view a series of images and rate each one on a scale based on its realism. The experiment can be conducted in both test mode and fMRI mode.
+This PsychoPy experiment displays images to participants and collects their ratings on the realism of each image. The experiment is compatible with both fMRI environments and standard behavioral setups, with customizable settings for each context.
 
 ## Table of Contents
+
+- [Dependencies](#dependencies)
 - [Setup](#setup)
 - [MR_Settings Initialization](#mr_settings-initialization)
 - [Collect Participant Info and fMRI Check](#collect-participant-info-and-fmri-check)
+- [Create the Filename and Log File](#create-the-filename-and-log-file)
+- [Initialize the Experiment Handler](#initialize-the-experiment-handler)
 - [Screen and Monitor Setup](#screen-and-monitor-setup)
 - [Loading Image Paths](#loading-image-paths)
+- [Initialize Visual Components](#initialize-visual-components)
 - [Introduction Screen](#introduction-screen)
 - [Experiment Loop](#experiment-loop)
 - [Ending the Experiment](#ending-the-experiment)
 - [Data Saving](#data-saving)
+
+## Dependencies
+
+This experiment requires the following Python packages:
+
+- `psychopy`
+- `pandas`
+- `screeninfo`
+
+If the packages are not installed, to install these packages, run the following command in your conda psychopy environment in your terminal/anaconda prompt:
+
+```bash
+pip install pandas screeninfo
+```
 
 ## Setup
 
@@ -50,7 +68,30 @@ exp_info = {'participant': '', 'fMRI': False}
 dlg = gui.DlgFromDict(dictionary=exp_info, title='Image Rating Task')
 if not dlg.OK:
     core.quit()
+# set the fmri variable
 fmri = exp_info['fMRI']
+```
+
+## Create the Filename and Log File
+
+A filename is created for storing data, and a log file is set up to record the experiment’s events:
+
+```python
+os.makedirs(str(Path.cwd()/'data'), exist_ok=True)
+filename = str(Path('data') / exp_info['participant']) + '_experiment'
+logFile = logging.LogFile(str(filename)+'.log', level=logging.EXP, filemode='w')
+logging.console.setLevel(logging.WARNING)
+logging.info(f'Participant ID: {exp_info["participant"]}')
+```
+
+## Initialize the Experiment Handler
+
+An `ExperimentHandler` is created to manage and save experiment data:
+
+```python
+thisExp = data.ExperimentHandler(name='image_fmri', version='v01', extraInfo=None, runtimeInfo=None,
+                                 originPath=None, savePickle=True, saveWideText=True, dataFileName=filename)
+
 ```
 
 ## Screen and Monitor Setup
@@ -86,13 +127,26 @@ except Exception as e:
     core.quit()
 ```
 
+## Initialize Visual Components
+
+Several visual stimuli are initialized, including the rating scale, fixation cross, and an image stimulus:
+
+```python
+questionScale = visual.RatingScale(win=win, name='questionScale', scale='How realistic do you think this image is?\n\n\n',
+                                   showAccept=False, noMouse=True, low=1, high=5, textSize=1.25, stretch=1.5,
+                                   markerStart=3, leftKeys='g', rightKeys='b', acceptKeys='r', labels=['1', '5'],
+                                   maxTime=10)
+fix = visual.TextStim(win, text='+', height=fontH*2, color=textCol)
+image = visual.ImageStim(win, size=(.5625, .5625))
+```
+
 ## Introduction Screen
 
 An introductory screen is displayed before the experiment starts:
 
 ```python
-intro_text = visual.TextStim(win, 
-                             text="Welcome to the experiment!\n\nYou will see a series of images.\nPlease rate each image after it is displayed.\nPress any key to start.", 
+intro_text = visual.TextStim(win,
+                             text="Welcome to the experiment!\n\nYou will see a series of images.\nPlease rate each image after it is displayed.\nPress any key to start.",
                              color=textCol, height=fontH, wrapWidth=wrapW)
 intro_text.draw()
 win.flip()
